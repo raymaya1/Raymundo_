@@ -1,0 +1,1455 @@
+<html>
+  https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js
+  https://res.cloudinary.com/dwnoneszt/raw/upload/v1487027547/waypoints.min_bklk0y.js
+  https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js
+  https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js
+  https://res.cloudinary.com/dwnoneszt/raw/upload/v1486999498/parallax.min_ttyve7.js   
+  https://res.cloudinary.com/dwnoneszt/raw/upload/v1486999247/jquery.malihu.PageScroll2id.min_jv3vns.js
+  https://res.cloudinary.com/dwnoneszt/raw/upload/v1487027434/animate-css_gojafo.js
+  <head>
+    <style>
+      *::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialised;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+  color: #666;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+svg {
+  height: 60px;
+  width: 60px;
+  z-index: 100;
+  position: relative;
+}
+
+.loader {
+  background: none repeat scroll 0 0 #ffffff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.loader_image {
+  background-image: url(https://res.cloudinary.com/dwnoneszt/image/upload/v1486999584/preloader6_yf4oxu.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  height: 100px;
+  width: 100px;
+  margin-top: -30px;
+  margin-left: -30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+
+section {
+  padding: 70px 0 80px;
+}
+section h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 0 0 15px 0;
+}
+section h2.personal_header {
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #555;
+}
+section h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+section .section_descr_wrapper {
+  text-align: center;
+}
+section .section_descr_wrapper .section_descr {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative;
+  margin-bottom: 130px;
+}
+section .section_descr_wrapper .section_descr::after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+footer {
+  padding: 50px 0;
+  font-size: 13px;
+}
+
+section, .main_head {
+  position: relative;
+}
+
+header {
+  position: relative;
+}
+header .main_head {
+  position: relative;
+  min-height: 100vh;
+  background-color: #fff;
+  padding-top: 20px;
+}
+header .main_head::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+header .main_head .menu_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+header .main_head .menu_wrapper .logo_container {
+  z-index: 9995;
+}
+header .main_head .menu_wrapper .toggle_mnu {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 20px;
+  z-index: 9998;
+  border-radius: 3px;
+  border: none;
+  padding: 0;
+}
+header .main_head .menu_wrapper .toggle_mnu:focus {
+  outline: none;
+}
+header .main_head .menu_wrapper .toggle_mnu .sandwich {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 200;
+}
+header .main_head .menu_wrapper .toggle_mnu .sandwich span {
+  display: block;
+}
+header .main_head .menu_wrapper .toggle_mnu .sw-topper {
+  position: relative;
+  top: 0;
+  width: 34px;
+  height: 4px;
+  background: white;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: transform 0.5s, top 0.2s;
+}
+header .main_head .menu_wrapper .toggle_mnu .sw-bottom {
+  position: relative;
+  width: 34px;
+  height: 4px;
+  top: 10px;
+  background: white;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: transform 0.5s, top 0.2s;
+  transition-delay: 0.2s, 0s;
+}
+header .main_head .menu_wrapper .toggle_mnu .sw-footer {
+  position: relative;
+  width: 34px;
+  height: 4px;
+  top: 20px;
+  background: white;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+}
+header .main_head .menu_wrapper .toggle_mnu .sandwich.active .sw-topper {
+  top: 15px;
+  transform: rotate(135deg);
+}
+header .main_head .menu_wrapper .toggle_mnu .sandwich.active .sw-bottom {
+  top: 11px;
+  transform: rotate(-135deg);
+}
+header .main_head .menu_wrapper .toggle_mnu .sandwich.active .sw-footer {
+  opacity: 0;
+  top: 0;
+  transform: rotate(180deg);
+}
+header .main_head .top_mnu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9997;
+  display: none;
+}
+header .main_head .top_mnu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 180px;
+  text-align: center;
+}
+header .main_head .top_mnu li {
+  padding: 0;
+  margin: 0;
+}
+header .main_head .top_mnu li:nth-child(1) a {
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+}
+header .main_head .top_mnu li:nth-child(2) a {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+header .main_head .top_mnu li:nth-child(3) a {
+  -webkit-animation-duration: 1.4s;
+  -moz-animation-duration: 1.4s;
+  animation-duration: 1.4s;
+}
+header .main_head .top_mnu li:nth-child(4) a {
+  -webkit-animation-duration: 1.8s;
+  -moz-animation-duration: 1.8s;
+  animation-duration: 1.8s;
+}
+header .main_head .top_mnu li:nth-child(5) a {
+  -webkit-animation-duration: 2.2s;
+  -moz-animation-duration: 2.2s;
+  animation-duration: 2.2s;
+}
+header .main_head .top_mnu li a {
+  position: relative;
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  height: 60px;
+  outline: none;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+}
+header .main_head .top_mnu li a span {
+  position: relative;
+  display: block;
+  top: -42px;
+  left: 0;
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+header .main_head .top_mnu li a span:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+header .top_wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .top_wrapper .text_wrapper {
+  text-align: center;
+  display: inline-block;
+  z-index: 9999;
+}
+header .top_wrapper .text_wrapper h1 {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  border: 8px solid #fff;
+  text-transform: uppercase;
+  font-size: 34px;
+  font-weight: 800;
+  background-color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 6px;
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+header .top_wrapper .text_wrapper p {
+  font-size: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  -webkit-animation-delay: 1.1s;
+  -moz-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+}
+
+section.about .photo_wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+section.about .photo_wrapper a {
+  outline: none;
+}
+section.about .photo_wrapper a img {
+  width: 220px;
+  display: inline-block;
+  border-radius: 50%;
+}
+section.about p {
+  margin-bottom: 30px;
+}
+section.about ul,
+section.about li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+section.about .social_wrap {
+  margin-top: 25px;
+}
+section.about .social_wrap li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+section.cv .section_content .left {
+  border-right: 1px solid #d2d2d2;
+  text-align: right;
+}
+section.cv .section_content .left h3 {
+  text-align: right;
+}
+section.cv .section_content .right {
+  border-left: 1px solid #d2d2d2;
+  text-align: left;
+}
+section.cv .section_content .right h3 {
+  text-align: left;
+}
+section.cv .section_content h3 {
+  margin-top: 30px;
+}
+section.cv .section_content .icon {
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+section.cv .section_content .item {
+  margin-bottom: 30px;
+}
+section.cv .section_content .item .year {
+  display: inline-block;
+  padding: 0 20px;
+  border-radius: 2px;
+  font-style: italic;
+  font-weight: 400;
+}
+section.cv .section_content .item .details {
+  padding: 20px 0px;
+}
+section.cv .section_content .item .details strong {
+  font-weight: 800;
+  font-style: none;
+  text-transform: uppercase;
+}
+
+section.portfolio .section_content ul,
+section.portfolio .section_content li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+section.portfolio .section_content li {
+  display: inline-block;
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+  line-height: 2;
+}
+section.portfolio .section_content ul {
+  margin-bottom: 50px;
+}
+section.portfolio .section_content .mix {
+  display: none;
+}
+section.portfolio .section_content #portfolio_grid {
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+section.portfolio .section_content .portfolio_item {
+  position: relative;
+  padding: 0;
+}
+section.portfolio .section_content .portfolio_item img {
+  width: 100%;
+}
+section.portfolio .section_content .portfolio_item .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding-top: 15%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+section.portfolio .section_content .portfolio_item .details:hover {
+  opacity: 1;
+  padding-top: 20%;
+}
+section.portfolio .section_content .portfolio_item .details h3 {
+  color: #fff;
+  margin-bottom: 0;
+}
+section.portfolio .section_content .portfolio_item .details a {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 2px 20px;
+  display: inline-block;
+}
+section.portfolio .section_content .portfolio_item .details a:hover {
+  text-decoration: none;
+}
+section.portfolio .section_content .portfolio_item .details a:focus {
+  text-decoration: none;
+}
+
+.mfp-container .mfp-content {
+  text-align: center;
+}
+.mfp-container .mfp-content .more {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  max-width: 500px;
+  padding: 10px 0 0px;
+}
+.mfp-container .mfp-content .more p,
+.mfp-container .mfp-content .more h3 {
+  padding: 20px;
+  padding-bottom: 0;
+  text-align: left;
+}
+.mfp-container .mfp-content .more p {
+  margin-bottom: 25px;
+}
+.mfp-container .mfp-content .more h3 {
+  padding-bottom: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.mfp-container .mfp-content .more img {
+  padding: 0;
+  width: 100%;
+}
+
+section.contacts .contact_box {
+  margin-bottom: 40px;
+}
+section.contacts .contact_box a:hover {
+  text-decoration: none;
+}
+section.contacts .contact_box h3 {
+  text-align: left;
+  color: #000;
+  margin-bottom: 0px;
+}
+section.contacts .contact_box a {
+  display: inline-block;
+  padding: 15px 0;
+}
+section.contacts .contact_box .icon {
+  font-size: 30px;
+}
+section.contacts .contact_box p {
+  font-size: 16px;
+}
+section.contacts .contact_box:nth-child(2) p {
+  font-family: RobotoRegular;
+  font-size: 16px;
+}
+section.contacts form .form-group {
+  display: block;
+  margin-bottom: 55px;
+}
+section.contacts form .form-group label {
+  display: block;
+}
+section.contacts form .form-group input {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  line-height: 40px;
+  text-indent: 15px;
+  font-size: 12px;
+}
+section.contacts form .form-group input:focus {
+  outline: none;
+}
+section.contacts form .form-group textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  resize: none;
+  padding: 10px 20px;
+}
+section.contacts form .form-group textarea:focus {
+  outline: none;
+}
+section.contacts form button {
+  border: none;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+section.contacts form button:focus {
+  outline: none;
+}
+section.contacts .help-block.text-danger {
+  position: absolute;
+}
+section.contacts .help-block.text-danger ul {
+  padding: 0 0 0 20px;
+  font-size: 10px;
+}
+
+.main_footer .footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_footer .footer_wrapper .social_wrap ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+}
+.main_footer .footer_wrapper .social_wrap li {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 25px;
+}
+.main_footer .footer_wrapper .social_wrap li i {
+  transition: color 0.6s;
+}
+.main_footer .footer_wrapper .social_wrap li i:hover {
+  color: #000;
+}
+.main_footer .footer_wrapper .up_button {
+  font-size: 40px;
+}
+.main_footer .footer_wrapper [data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 1s;
+}
+.main_footer .footer_wrapper [data-tooltip]:before,
+.main_footer .footer_wrapper [data-tooltip]:after {
+  text-transform: uppercase;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+.main_footer .footer_wrapper [data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.main_footer .footer_wrapper [data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51, 51, 51, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+.main_footer .footer_wrapper [data-tooltip]:hover:before,
+.main_footer .footer_wrapper [data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+svg {
+  stroke: white;
+  stroke-width: 5;
+  filter: url(#blur-filter);
+}
+svg path {
+  transition: all 1s;
+  fill: #FF6347;
+}
+
+button {
+  transition: all 1s;
+}
+button:hover {
+  box-shadow: 0 0 20px #FF6347;
+}
+
+body {
+  color: #222;
+}
+
+a {
+  color: #FF6347;
+}
+
+p,
+body .main_footer,
+.about li {
+  color: #888;
+}
+
+.color_element {
+  color: #FF6347;
+}
+
+.color_bg {
+  background-color: #FF6347;
+}
+
+.color_border {
+  border-color: #FF6347;
+}
+
+.bg_light {
+  background-color: #FAFAFA;
+}
+
+.bg_dark {
+  background-color: #222;
+  color: #fff;
+}
+.bg_dark .section_descr::after {
+  background-color: #fff;
+}
+.bg_dark a {
+  color: #fff;
+}
+
+.top_mnu a:hover {
+  color: #FF6347;
+}
+.top_mnu a {
+  letter-spacing: 4px;
+}
+
+.top_text p {
+  color: #FAFAFA;
+  letter-spacing: 5px;
+}
+
+.personal_header {
+  letter-spacing: 2px;
+}
+
+.section_descr {
+  letter-spacing: 14px;
+}
+.section_descr::after {
+  background-color: #222;
+}
+
+section h3 {
+  letter-spacing: 3px;
+  color: #888;
+}
+
+.about p:nth-child(even) {
+  color: #FF6347;
+}
+
+.section_content h3 {
+  color: #222;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.item .year {
+  background-color: #FF6347;
+  color: #fff;
+}
+.item .details {
+  letter-spacing: 1px;
+}
+
+section.portfolio li {
+  color: #888;
+  letter-spacing: 2px;
+}
+section.portfolio li.active {
+  color: #fff;
+  border-bottom: 1px solid #FF6347;
+}
+section.portfolio .portfolio_item .details a {
+  border-color: #FF6347;
+  color: #FF6347;
+}
+
+section.contacts .contact_box .icon {
+  color: #FF6347;
+}
+
+.text-danger {
+  color: #FF6347;
+}
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #FF6347 !important;
+}
+form input,
+form textarea {
+  letter-spacing: 2px;
+}
+form button {
+  background-color: #FF6347;
+  letter-spacing: 2px;
+}
+form .form-group {
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.popup_content {
+  letter-spacing: 1px;
+}
+
+.main_footer a {
+  color: #FF6347;
+}
+
+header .toggle_mnu {
+  background-color: #FF6347;
+}
+
+.main_head .top_mnu a:hover {
+  color: #FF6347;
+  text-decoration: none;
+}
+.main_head .top_mnu a {
+  letter-spacing: 4px;
+}
+
+.top_wrapper .text_wrapper p {
+  color: #FAFAFA;
+  letter-spacing: 5px;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- preloader -->
+<div class="loader">
+	<div class="loader_image"></div>
+</div>
+
+<header>
+
+	<div class="main_head" id="home">
+		<div class="container" id='bootstrapWidth'>
+			<div class="row">
+				<div class="col-xs-12">
+
+					<div class="menu_wrapper">
+						<div class="logo_container">
+							<a href="#home">
+								<svg version="1.1" id="logo_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="595.283px" height="470.75px" viewBox="0 0 595.283 470.75" enable-background="new 0 0 595.283 470.75" xml:space="preserve">
+									<filter id="blur-filter" x="-2" y="-2" width="200" height="200">
+      							<feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    							</filter>
+									<path id="path3347" d="M147.543,302.779C66.072,210.313-0.321,133.703,0.001,132.539
+									c0.322-1.168,19.147-31.515,41.831-67.438L83.078-0.216l214.639,0.595l214.637,0.595l41.39,65.317
+									c22.764,35.924,41.455,66.033,41.541,66.906c0.084,0.873-56.707,65.951-126.201,144.631
+									c-69.496,78.674-136.299,154.33-148.449,168.118c-12.152,13.794-22.74,25.05-23.527,25.02
+									C296.317,470.929,229.017,395.245,147.543,302.779L147.543,302.779z M351.412,274.723c29.006-71.398,52.733-130.447,52.733-131.218
+									s-48.399-1.402-107.557-1.402c-85.138,0-107.302,0.611-106.338,2.916c0.67,1.604,23.458,57.502,50.64,124.219
+									c60.895,149.458,55.841,137.364,56.9,136.242C298.278,404.965,322.41,346.124,351.412,274.723L351.412,274.723z M215.651,272.115
+									l-52.893-130.01H98.759h-64l4.696,5.249c2.58,2.888,43.417,48.815,90.745,102.059c133.875,150.616,136.979,154.079,137.682,153.374
+									C268.245,402.423,244.742,343.621,215.651,272.115L215.651,272.115z M377.408,347.389c26.809-30.151,78.434-88.113,114.721-128.811
+									c36.289-40.693,65.979-74.567,65.979-75.27c0-0.705-28.506-0.999-63.346-0.658l-63.348,0.621l-53.002,130.149
+									c-29.152,71.586-52.271,129.844-51.371,129.469C327.935,402.516,350.603,377.541,377.408,347.389L377.408,347.389z
+									M156.487,116.882c-1.878-4.579-59.187-93.744-60.248-93.742c-1.106,0.007-51.265,78.24-57.827,90.19l-2.991,5.444h60.92
+									C129.849,118.777,156.914,117.927,156.487,116.882z M351.573,70.748c-28.94-26.413-53.885-47.526-55.428-46.908
+									c-2.455,0.978-84.13,74.229-99.562,89.295l-5.783,5.641h106.697h106.69L351.573,70.748z M529.633,70.813
+									c-24.59-38.6-31.111-47.369-33.41-44.906c-1.57,1.682-14.133,20.874-27.92,42.65c-13.787,21.774-26.633,41.983-28.549,44.906
+									l-3.482,5.312h61.963h61.957L529.633,70.813L529.633,70.813z M259.129,22.71c0.427-1.049-29.316-1.906-66.094-1.906
+									s-66.523,0.84-66.094,1.871c0.427,1.024,11.62,18.872,24.872,39.657l24.095,37.785l41.22-37.752
+									C239.802,41.603,258.701,23.758,259.129,22.71z M443.196,63.375c12.722-20.204,23.896-38.055,24.834-39.657
+									c1.353-2.302-12.297-2.916-65.108-2.916c-36.748,0-66.463,0.905-66.037,2.006c0.592,1.53,81.014,76.476,82.803,77.161
+									C419.897,100.051,430.476,83.584,443.196,63.375L443.196,63.375z"/>
+									<path id="glow" fill="none" stroke-width="2" stroke-miterlimit="10" stroke="#4dbeee" d="M147.543,302.779C66.072,210.313-0.321,133.703,0.001,132.539
+									c0.322-1.168,19.147-31.515,41.831-67.438L83.078-0.216l214.639,0.595l214.637,0.595l41.39,65.317
+									c22.764,35.924,41.455,66.033,41.541,66.906c0.084,0.873-56.707,65.951-126.201,144.631
+									c-69.496,78.674-136.299,154.33-148.449,168.118c-12.152,13.794-22.74,25.05-23.527,25.02
+									C296.317,470.929,229.017,395.245,147.543,302.779L147.543,302.779z M351.412,274.723c29.006-71.398,52.733-130.447,52.733-131.218
+									s-48.399-1.402-107.557-1.402c-85.138,0-107.302,0.611-106.338,2.916c0.67,1.604,23.458,57.502,50.64,124.219
+									c60.895,149.458,55.841,137.364,56.9,136.242C298.278,404.965,322.41,346.124,351.412,274.723L351.412,274.723z M215.651,272.115
+									l-52.893-130.01H98.759h-64l4.696,5.249c2.58,2.888,43.417,48.815,90.745,102.059c133.875,150.616,136.979,154.079,137.682,153.374
+									C268.245,402.423,244.742,343.621,215.651,272.115L215.651,272.115z M377.408,347.389c26.809-30.151,78.434-88.113,114.721-128.811
+									c36.289-40.693,65.979-74.567,65.979-75.27c0-0.705-28.506-0.999-63.346-0.658l-63.348,0.621l-53.002,130.149
+									c-29.152,71.586-52.271,129.844-51.371,129.469C327.935,402.516,350.603,377.541,377.408,347.389L377.408,347.389z
+									M156.487,116.882c-1.878-4.579-59.187-93.744-60.248-93.742c-1.106,0.007-51.265,78.24-57.827,90.19l-2.991,5.444h60.92
+									C129.849,118.777,156.914,117.927,156.487,116.882z M351.573,70.748c-28.94-26.413-53.885-47.526-55.428-46.908
+									c-2.455,0.978-84.13,74.229-99.562,89.295l-5.783,5.641h106.697h106.69L351.573,70.748z M529.633,70.813
+									c-24.59-38.6-31.111-47.369-33.41-44.906c-1.57,1.682-14.133,20.874-27.92,42.65c-13.787,21.774-26.633,41.983-28.549,44.906
+									l-3.482,5.312h61.963h61.957L529.633,70.813L529.633,70.813z M259.129,22.71c0.427-1.049-29.316-1.906-66.094-1.906
+									s-66.523,0.84-66.094,1.871c0.427,1.024,11.62,18.872,24.872,39.657l24.095,37.785l41.22-37.752
+									C239.802,41.603,258.701,23.758,259.129,22.71z M443.196,63.375c12.722-20.204,23.896-38.055,24.834-39.657
+									c1.353-2.302-12.297-2.916-65.108-2.916c-36.748,0-66.463,0.905-66.037,2.006c0.592,1.53,81.014,76.476,82.803,77.161
+									C419.897,100.051,430.476,83.584,443.196,63.375L443.196,63.375z"/>
+									</svg>
+							</a>
+						</div>
+						<!-- */logo_container -->
+						<button class="toggle_mnu">
+								<span class='sandwich'>
+									<span class='sw-topper'></span>
+									<span class='sw-bottom'></span>
+									<span class='sw-footer'></span>
+								</span>						
+							</button>
+					</div>
+					<!-- menu_wrapper -->
+
+					<nav class="top_mnu">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About myself</a></li>
+							<li><a href="#cv">CV</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#contacts">Contacts</a></li>
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- */main_head -->
+
+	<div class="top_wrapper">
+		<div class="text_wrapper">
+			<h1>Raymundo Maya</h1>
+			<p>UX/UI designer Development</p>
+		</div>
+	</div>
+
+</header>
+
+<!-- SECTION ABOUT ME -->
+<section id="about" class="about bg_light">
+
+	<div class="section_header">
+		<h2>About me</h2>
+		<div class="section_descr_wrapper">
+			<div class="section_descr">Let's get aquainted</div>
+		</div>
+	</div>
+
+	<div class="section_content">
+		<div class="container">
+			<div class="row">
+
+				<!-- PHOTO -->
+				<div class="col-md-4 col-md-push-4 animation_center">
+					<h3>Photo</h3>
+					<div class="photo_wrapper">
+						<a href="" class="pop_up" id="avatar_a">
+							<img id="avatar_img" src="https://scontent.fmex5-1.fna.fbcdn.net/v/t39.30808-6/359483814_6285327381553038_6644279759928306236_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeH-_YMFOO69JVD3DcB5bPflvAH8hKpdD_m8AfyEql0P-TAboYlrW0x_45-txX-9LLyYeR1doZ-gv9lLVPEbYdlh&_nc_ohc=LKFb7NF2fbcAX_jzB4j&_nc_ht=scontent.fmex5-1.fna&oh=00_AfCrMkb2s6Y8R26Vph_Qo5n7Pt_ExwTJ2cO46U1SmMMnug&oe=65B236F4" alt="myphoto">
+						</a>
+					</div>
+				</div>
+				<!-- */col -->
+				<!-- */PHOTO -->
+
+				<div class="col-md-4 col-md-pull-4 animation_left">
+					<h3>A Little bit about me</h3>
+					<p>
+I am a UX/UI designer with knowledge in animation and 3D modeling prepared for new challenges.</p>
+					<p>I have had experience in graphic design, in the public and private sectors, as well as in packaging design and knowledge in different types of printing</p>
+				</div>
+				<!-- */col -->
+
+				<div class="col-md-4 animation_right">
+					<h3>Personal info</h3>
+					<h2 class="personal_header">Raymundo Maya</h2>
+					<ul>
+						<li>ICT engineer with a specialty in animation and 3D modeling</li>
+						<li>3D designer to Blander and Maya</li>
+						<li>HTML to WordPress</li>
+						<li>Adobe Packaging - Illustraitor, Photoshop, XD, Premiere</li>
+						<li>Figma</li>
+					</ul>
+					<div class="social_wrap">
+						<ul>
+							<li><a href="https://ua.linkedin.com/in/viktor-strelianyi-68b10746" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/viktor.strelianyi" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://github.com/vstrelianyi" target="_blank"><i class="fa fa-github"></i></a></li>
+							<li><a href="https://codepen.io/AnakinSkywalk/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- */col -->
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- SECTION CV -->
+<!-- SECTION PORTFOLIO -->
+<section id="portfolio" class="portfolio bg_dark">
+	<div class="section_header">
+		<h2>Portfolio</h2>
+		<div class="section_descr_wrapper">
+			<div class="section_descr">my experience in different areas of design</div>
+		</div>
+	</div>
+	<div class="section_content">
+		<div class="container">
+			<div class="row">
+
+				<div class="filter_div controls">
+					<ul>
+						<li class="filter active" data-filter="all">All projects</li>
+						<li class="filter" data-filter=".category_1">Graphics Desing projects</li>
+						<li class="filter" data-filter=".category_2">3D Desing projects</li>
+						<li class="filter" data-filter=".category_3">Various Design areas projects</li>
+					</ul>
+				</div>
+
+				<div id="portfolio_grid">
+
+					<!-- PORTFOLIO ITEM -->
+					<div class="mix col-xs-6 col-sm-6 col-md-3 portfolio_item category_1">
+
+						<img class="img_portfolio1" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998762/PortfolioLanding/1.jpg" alt="Alt" />
+						<div class="details">
+							<h3>prepress design</h3>
+							<p>Work details</p>
+							<a href="#" class="pop_details">More</a>
+						</div>
+
+						<div class="hidden">
+							<div class="more">
+								<h3>prepress design</h3>
+								<p>Make designs thinking about what type of material they will be printed on, taking into account the characteristics of each material.</p>
+								<img class="img_portfolio1" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998762/PortfolioLanding/1.jpg" alt="Alt" />
+							</div>
+						</div>
+
+					</div>
+					<!-- */portfolio_item -->
+
+					<!-- PORTFOLIO ITEM -->
+					<div class="mix col-xs-6  col-sm-6 col-md-3 portfolio_item category_1">
+
+						<img class="img_portfolio2" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/2.jpg" alt="Alt" />
+						<div class="details">
+							<h3>editorial design</h3>
+							<p>Work details</p>
+							<a href="#" class="pop_details">More</a>
+						</div>
+
+						<div class="hidden">
+							<div class="more">
+								<h3>editorial design</h3>
+								<p>creation and production of all kinds of editorial publications such as, for example, books, etc..</p>
+								<img class="img_portfolio2" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/2.jpg" alt="Alt" />
+							</div>
+						</div>
+
+					</div>
+
+					<!-- PORTFOLIO ITEM -->
+					<div class="mix col-xs-6  col-sm-6 col-md-3 portfolio_item category_2">
+
+						<img class="img_portfolio3" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/3.jpg" alt="Alt" />
+						<div class="details">
+							<h3>3D Desing</h3>
+							<p>Work details</p>
+							<a href="#" class="pop_details">More</a>
+						</div>
+
+						<div class="hidden">
+							<div class="more">
+								<h3>3D Desing</h3>
+								<p>Conceptualization of 3D models and environments used for various purposes, from entertainment to educational purposes</p>
+								<img class="img_portfolio3" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/3.jpg" alt="Alt" />
+							</div>
+						</div>
+
+					</div>
+
+					<!-- PORTFOLIO ITEM -->
+					<div class="mix col-xs-6 col-sm-6 col-md-3 portfolio_item category_2">
+
+						<img class="img_portfolio4" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/4.jpg" alt="Alt" />
+						<div class="details">
+							<h3>3D simulation</h3>
+							<p>Work details</p>
+							<a href="#" class="pop_details">More</a>
+						</div>
+
+						<div class="hidden">
+							<div class="more">
+								<h3>3D simulation</h3>
+								<p>This project was carried out with the aim of simulating fluids in a convincing way, using various 3D Modeling techniques.</p>
+								<img class="img_portfolio4" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/4.jpg" alt="Alt" />
+							</div>
+						</div>
+
+					</div>
+
+					<!-- PORTFOLIO ITEM -->
+					<div class="mix col-xs-6 col-sm-6 col-md-3 portfolio_item category_2">
+
+						<img class="img_portfolio5" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/5.jpg" alt="Alt" />
+						<div class="details">
+							<h3>Stand 3D</h3>
+							<p>Work details</p>
+							<a href="#" class="pop_details">More</a>
+						</div>
+
+						<div class="hidden">
+							<div class="more">
+								<h3>Stand 3D</h3>
+								<p>In order to make a proposal on how the spaces assigned for a sales stand could be distributed, a 3D Stand proposal was made taking into account everything from dimensions to materials used to carry out said exercise..</p>
+								<img class="img_portfolio5" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/5.jpg" alt="Alt" />
+							</div>
+						</div>
+
+					</div>
+
+					<!-- PORTFOLIO ITEM -->
+					<div class="mix col-xs-6 col-sm-6 col-md-3 portfolio_item category_3">
+
+						<img class="img_portfolio6" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/6.jpg" alt="Alt" />
+						<div class="details">
+							<h3>Packaging design</h3>
+							<p>Work details</p>
+							<a href="#" class="pop_details">More</a>
+						</div>
+
+						<div class="hidden">
+							<div class="more">
+								<h3>Packaging design</h3>
+								<p>through a combination of graphic design and product design, which determines the visual and functional aspect of the project.</p>
+								<img class="img_portfolio6" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998763/PortfolioLanding/6.jpg" alt="Alt" />
+							</div>
+						</div>
+
+					</div>
+
+					<!-- PORTFOLIO ITEM -->
+					<div class="mix col-xs-6 col-sm-6 col-md-3 portfolio_item category_3">
+
+						<img class="img_portfolio1" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998762/PortfolioLanding/1.jpg" alt="Alt" />
+						<div class="details">
+							<h3>Display design</h3>
+							<p>Work details</p>
+							<a href="#" class="pop_details">More</a>
+						</div>
+
+						<div class="hidden">
+							<div class="more">
+								<h3>Display design</h3>
+								<p>A piece design was required to display the footwear, a design was developed according to the specifications given by the client, but there was also creative freedom in terms of shapes and materials.</p>
+								<img class="img_portfolio1" src="https://res.cloudinary.com/dwnoneszt/image/upload/v1486998762/PortfolioLanding/1.jpg" alt="Alt" />
+							</div>
+						</div>
+
+					</div>
+
+					<!-- PORTFOLIO ITEM -->
+
+
+				</div>
+				<!-- */portfolio_grid -->
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- SECTION CONTACTS -->
+<section id="contacts" class="contacts bg_light">
+	<div class="section_header">
+		<h2>Contacts</h2>
+		<div class="section_descr_wrapper">
+			<div class="section_descr">Leave your message</div>
+		</div>
+	</div>
+	<div class="section_content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+
+					<div class="contact_box">
+						<div class="icon"><i class="icon-basic-geolocalize-05"></i></div>
+						<h3>Address</h3>
+						<p> Mexico City, Mexico.</p>
+					</div>
+
+					<div class="contact_box">
+						<div class="icon"><i class="icon-basic-smartphone"></i></div>
+						<h3>Phone</h3>
+						<p>56-15-31-92-71</p>
+					</div>
+
+					<div class="contact_box">
+						<div class="icon"><i class="icon-basic-webpage-img-txt"></i></div>
+						<h3>E-mail</h3>
+						<a href="mailto:chmpain@gmail.com?Subject=Hello%20">raymundo.maya.rivera.itics.1999@gmail.com</a>
+					</div>
+				</div>
+				<!-- */col -->
+
+
+				<!-- */col -->
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<footer class="main_footer bg_dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="footer_wrapper">
+
+					<div class="left">
+						&copy;2017 Viktor Strelianyi
+					</div>
+					<div class="up_button">
+						<p><a href="#home" data-tooltip="Scroll to top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></a></p>
+					</div>
+					<div class="social_wrap">
+						<ul>
+							<li><a href="https://ua.linkedin.com/in/viktor-strelianyi-68b10746" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/viktor.strelianyi" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://github.com/vstrelianyi" target="_blank"><i class="fa fa-github"></i></a></li>
+							<li><a href="https://codepen.io/AnakinSkywalk/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+						</ul>
+					</div>
+
+				</div>
+				<!-- */footer_wrapper -->
+			</div>
+			<!-- */col -->
+		</div>
+	</div>
+</footer>
+
+    <script>
+      
+$(function() {
+
+	//===========================
+	//MIXITUP TILES==============
+	//===========================
+	$('#portfolio_grid').mixItUp({
+		animation: {
+			animateResizeContainer: true,
+			animateResizeTargets: true,
+			duration: 800,
+			effects: 'fade rotateZ(20deg) scale(0.01) rotateX(20deg)',
+			easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+		}
+	});
+
+	//================================
+	//ANIMATION=======================
+	//================================
+	//Header of each section animation
+	$(".section_header").animated("fadeInUp", "fadeOutDown");
+
+	//about
+	$(".animation_left").animated("fadeInLeft", "fadeOutDown");
+	$(".animation_center").animated("flipInY", "fadeOutDown");
+	$(".animation_right").animated("fadeInRight", "fadeOutDown");
+
+	//cv
+	$(".left .item").animated("fadeInLeft", "fadeOutDown");
+	$(".right .item").animated("fadeInRight", "fadeOutDown");
+
+	//=======================================================================
+	//SVG Fallback===========================================================
+	//=======================================================================
+	// if(!Modernizr.svg) {
+	// 	$("img[src*='svg']").attr("src", function() {
+	// 		return $(this).attr("src").replace(".svg", ".png");
+	// 	});
+	// };
+
+	//menu button animation================================================
+	$(".toggle_mnu").click(function() {
+		$(".sandwich").toggleClass("active");
+
+		// makes button disabled until animaion is over
+		var button = $(this);
+		button.attr('disabled', 'disabled');
+		setTimeout(function() {
+			button.removeAttr('disabled');
+		}, 700);
+	});
+
+	//=======================================================================
+	//menu links click function
+	//=======================================================================
+	$(".top_mnu ul a").click(function() {
+		$(".top_mnu").fadeOut(600);
+		$(".sandwich").toggleClass("active");
+	}).append("<span>");
+
+	//set state of menu itself 
+	$(".toggle_mnu").click(function() {
+		// $(".top_mnu:visible").fadeOut(600);
+		// $(".top_mnu:visible li a").removeClass("fadeInUp animated");
+		// $(".top_mnu:hidden").fadeIn(600);
+		// $(".top_mnu:hidden li a").addClass("fadeInUp animated");
+		if ($(".top_mnu").is(":visible")) {
+			$(".top_mnu").fadeOut(600);
+			$(".top_mnu li a").removeClass("fadeInUp animated");
+		} else {
+			$(".top_mnu").fadeIn(600);
+			$(".top_mnu li a").addClass("fadeInUp animated");
+		}
+	});
+
+	//creates id's for project items and links for Magnific popup
+	$(".portfolio_item").each(function(i) {
+		$(this).find("a").attr("href", "#proj" + i);
+		$(this).find(".more").attr("id", "proj" + i);
+	});
+
+	//===========================
+	//Magnific popup=============
+	//===========================
+	//photo image
+	$('.pop_up').magnificPopup({
+		type: 'image',
+		callbacks: {
+			open: function() {
+				$(".toggle_mnu").css("display", "none");
+			},
+			close: function() {
+				$(".toggle_mnu").css("display", "block");
+			}
+		}
+	});
+
+	//project images
+	$('.pop_details').magnificPopup({
+		type: 'inline',
+		midClick: true,
+		showCloseBtn: true,
+		enableEscapeKey: true,
+		// overflowY: "hidden",
+		callbacks: {
+			open: function() {
+				$(".toggle_mnu").css("display", "none");
+			},
+			close: function() {
+				$(".toggle_mnu").css("display", "block");
+			}
+		}
+	});
+
+	//portfolio section add remove class
+	$(".portfolio li").click(function() {
+		$(".portfolio li").removeClass("active");
+		$(this).toggleClass("active");
+	});
+
+	//===================================
+	//Chrome Smooth Scroll===============
+	//===================================
+	try {
+		$.browserSelector();
+		if ($("html").hasClass("chrome")) {
+			$.smoothScroll();
+		}
+	} catch (err) {
+
+	};
+
+	//prevent images from dragging=============
+	$("img, a").on("dragstart", function(event) {
+		event.preventDefault();
+	});
+
+	//========================================
+	//PageScroll2id smoothscroll to link =====
+	//========================================
+	$(".top_mnu ul a").mPageScroll2id();
+	$(".up_button a").mPageScroll2id();
+
+	// change fixed button position on resize==
+	var ButtonPositionOnResize = function() {
+			var oWidth = document.getElementById('bootstrapWidth').offsetWidth;
+			// console.log('offset width:' + oWidth);
+			var wWidth = $(window).width();
+			// console.log('offset width:' + wWidth);
+			var diff = wWidth - oWidth;
+			// console.log('diff : ' + diff);
+			if (diff > 0) {
+				$(".toggle_mnu").css("right", diff / 2);
+			} else {
+				$(".toggle_mnu").css("right", 30);
+			}
+		}
+		//returns value of position from right border
+	var ButtonPositionOnResize_return = function() {
+		var oWidth = document.getElementById('bootstrapWidth').offsetWidth;
+		// console.log('offset width:' + oWidth);
+		var wWidth = $(window).width();
+		// console.log('offset width:' + wWidth);
+		var diff = wWidth - oWidth;
+		// console.log('diff : ' + diff);
+		if (diff > 0) {
+			return diff / 2;
+		} else {
+			return 30;
+		}
+	}
+
+	ButtonPositionOnResize();
+
+	$(window).resize(function() {
+		ButtonPositionOnResize();
+	});
+
+	//=====================================
+	// PARALLAX
+	//=====================================
+	// https://pixelcog.github.io/parallax.js/
+	$('.main_head').parallax({
+		imageSrc: 'https://res.cloudinary.com/dwnoneszt/image/upload/v1486998737/PortfolioLanding/bg1.jpg',
+		parallax: "scroll",
+		zIndex: 1,
+		position: "top center"
+	});
+});
+
+$(window).load(function() {
+	//preloader settings =========================================
+	$(".loader_image").delay(500).fadeOut();
+	$(".loader").delay(500).fadeOut("slow");
+
+	//animation + waypoints plugin
+	$(".text_wrapper h1").animated("fadeInDown", "fadeOutUp");
+	$(".text_wrapper p").animated("fadeInUp", "fadeOutDown");
+});
+    </script>
+  </body>
+</html>
